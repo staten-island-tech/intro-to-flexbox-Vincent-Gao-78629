@@ -1,5 +1,5 @@
 body {
-    font-family: sans-serif;
+    font-family: 'Chelsea Market', cursive;
     margin: 0;
 }
 
@@ -22,10 +22,9 @@ section {
 }
 
 h2 {
-    whar align-items: center;
+    align-items: center;
     display: block;
     margin: auto;
-
     box-sizing: border-box;
     padding: 10px;
     width: 70%;
@@ -37,20 +36,28 @@ article {
     padding: 5px;
     margin: 10px;
     background: aqua;
-    justify-items: center;
     text-align: center;
+
     box-shadow: 5px 5px 5px gray;
     border-radius: 5px;
+}
+
+.button {
+    color: white;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px gray;
+    position: relative;
+    bottom: 0px;
+    margin: 10px auto;
 }
 
 .fruit {
     align-items: center;
     display: block;
     margin: auto;
-
     box-sizing: border-box;
     padding: 10px;
-    width: 70%;
+    height: 10vw;
 }
 
 
