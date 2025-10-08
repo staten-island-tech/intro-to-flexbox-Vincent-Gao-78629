@@ -57,7 +57,16 @@ article {
     margin: auto;
     box-sizing: border-box;
     padding: 10px;
-    height: 10vw;
+    width 70% of the box
+}
+
+.seafood {
+    align-items: center;
+    display: block;
+    margin: auto;
+    box-sizing: border-box;
+    padding: 10px;
+    width 70% of the box
 }
 
 
