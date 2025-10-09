@@ -41,12 +41,44 @@ const items = [
   },
 
   {
-    name: "",
+    name: "Potato",
     price: 3.99,
     inStock: true,
     class: "vegetables",
-    img: "img/.png",
-    alt: "A .",
+    img: "img/potato.png",
+    alt: "A potato.",
+  },
+  {
+    name: "Broccoli",
+    price: 3.99,
+    inStock: true,
+    class: "vegetables",
+    img: "img/broccoli.webp",
+    alt: "A broccoli.",
+  },
+  {
+    name: "Edamame",
+    price: 3.99,
+    inStock: true,
+    class: "vegetables",
+    img: "img/edamame.png",
+    alt: "An edamame.",
+  },
+  {
+    name: "Carrot",
+    price: 3.99,
+    inStock: true,
+    class: "vegetables",
+    img: "img/carrot.webp",
+    alt: "A bunch of carrots.",
+  },
+  {
+    name: "Cauliflower",
+    price: 3.99,
+    inStock: true,
+    class: "vegetables",
+    img: "img/cauliflower.webp",
+    alt: "A head of cauliflower.",
   },
 
   {
@@ -74,20 +106,12 @@ const items = [
     alt: "A tunafish.",
   },
   {
-    name: "Yellowtail",
-    price: 6.99,
+    name: "Salmon",
+    price: 8.99,
     inStock: true,
     class: "seafood",
-    img: "img/yellowtail.png",
-    alt: "A crab.",
-  },
-  {
-    name: "Crab",
-    price: 6.99,
-    inStock: true,
-    class: "seafood",
-    img: "img/crab.png",
-    alt: "A crab.",
+    img: "img/salmon.webp",
+    alt: "A salmonfish.",
   },
   {
     name: "Lobster",
@@ -97,6 +121,7 @@ const items = [
     img: "img/lobster.webp",
     alt: "A lobster.",
   },
+
   {
     name: "Sourdough bread",
     price: 6.99,
@@ -138,3 +163,10 @@ const items = [
     alt: "A loaf of brioche bread.",
   },
 ];
+
+function inject(item) {
+  const container = document.querySelector(".container");
+  container.insertAdjacentHTML("afterbegin", `<h1>${item.name}</h1>`);
+}
+
+inject(items[3]);
