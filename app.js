@@ -166,7 +166,17 @@ const items = [
 
 function inject(item) {
   const container = document.querySelector(".container");
-  container.insertAdjacentHTML("afterbegin", `<h1>${item.name}</h1>`);
+  container.insertAdjacentHTML(
+    "afterbegin",
+    `<h2>${item.name}</h2>`,
+  );
 }
 
-inject(items[3]);
+function buy() {
+  const buttons = document.querySelectorAll("button");
+  const buttonArray = Array.from(buttons);
+  buttonArray.forEach((button) => button.addEventListener("click"));
+  console.log(buttons);
+}
+
+items.forEach((item) => inject(item));
