@@ -34,7 +34,7 @@ h2 {
 .container {
     width: 20vw;
     padding: 5px;
-    margin: 10px;
+    margin: 10px auto;
     background: aqua;
     text-align: center;
     box-shadow: 5px 5px 5px gray;

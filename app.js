@@ -167,9 +167,12 @@ const items = [
 function inject(item) {
   const container = document.querySelector(".container");
   container.insertAdjacentHTML(
-    "afterbegin",
-    `<h2>${item.name}</h2>`,
-    `<img src=${item.img}/>`
+    "beforeend",
+    `
+      <h2>${item.name}</h2> 
+      <img src="${item.img}" alt="${item.alt}" class="${item.class}"/> 
+      <button class="button">Buy now</button>
+    `
   );
 }
 
