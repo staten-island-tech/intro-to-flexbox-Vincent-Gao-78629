@@ -165,22 +165,25 @@ const items = [
 ];
 
 function inject(item) {
-  const container = document.querySelector(".container");
-  container.insertAdjacentHTML(
+  const section = document.querySelector(".section");
+  section.insertAdjacentHTML(
     "beforeend",
     `
+    <div class="container">
       <h2>${item.name}</h2> 
-      <img src="${item.img}" alt="${item.alt}" class="${item.class}"/> 
-      <button class="button">Buy now</button>
+      <img src="${item.img}" alt="${item.alt}" class="item-img"/> 
+      <button class="button">Buy</button>
+    </div>
+      
     `
   );
 }
+items.forEach((item) => inject(item));
 
+const buttons = document.querySelectorAll("button");
+buttons.forEach(addEventListener("click", buy()));
 function buy() {
-  const buttons = document.querySelectorAll("button");
   const buttonArray = Array.from(buttons);
   buttonArray.forEach((button) => button.addEventListener("click"));
   console.log(buttons);
 }
-
-items.forEach((item) => inject(item));
