@@ -172,6 +172,7 @@ function inject(item) {
     <div class="container">
       <h2>${item.name}</h2> 
       <img src="${item.img}" alt="${item.alt}" class="item-img"/> 
+      <h2>${"$" + item.price}</h2> 
       <button class="button">Buy</button>
     </div>
       
@@ -180,10 +181,7 @@ function inject(item) {
 }
 items.forEach((item) => inject(item));
 
-const buttons = document.querySelectorAll("button");
-buttons.forEach(addEventListener("click", buy()));
-function buy() {
-  const buttonArray = Array.from(buttons);
-  buttonArray.forEach((button) => button.addEventListener("click"));
-  console.log(buttons);
-}
+const button = document.querySelectorAll("button");
+button.addEventListener("button", onclick);
+
+function buy() {}

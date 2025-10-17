@@ -4,7 +4,7 @@ body {
 }
 
 header {
-    background: purple;
+    background: rgb(20, 141, 202);
     height: 100px;
 }
 
@@ -38,9 +38,9 @@ h2 {
 .container {
     display: flex;
     width: 20vw;
-    height: 20vw;
-    padding: 5px;
-    margin: 10px auto;
+    height: 25vw;
+    padding: 10px;
+    margin: 15px auto;
     background: aqua;
     text-align: center;
     box-shadow: 5px 5px 5px gray;
@@ -55,43 +55,10 @@ h2 {
     position: relative;
     bottom: 0px;
     margin: 10px auto;
+    align-items: flex-end;
 }
 
-.fruit {
-    align-items: center;
-    display: block;
-    margin: auto;
-    box-sizing: border-box;
-    padding: 10px;
-    width: 10vw;
-}
 
-.seafood {
-    align-items: center;
-    display: block;
-    margin: auto;
-    box-sizing: border-box;
-    padding: 10px;
-    width: 10vw;
-}
-
-.vegetables {
-    align-items: center;
-    display: block;
-    margin: auto;
-    box-sizing: border-box;
-    padding: 10px;
-    width: 10vw;
-}
-
-.bread {
-    align-items: center;
-    display: block;
-    margin: auto;
-    box-sizing: border-box;
-    padding: 10px;
-    width: 10vw;
-}
 
 
 /* Add your flexbox CSS below here */
