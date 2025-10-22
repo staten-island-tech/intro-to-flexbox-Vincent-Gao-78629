@@ -173,17 +173,20 @@ function inject(item) {
       <h2>${item.name}</h2> 
       <img src="${item.img}" alt="${item.alt}" class="item-img"/> 
       <h2>$${item.price}</h2> 
-      <button class="button">Buy</button>
+      <button class="button">Add to cart</button>
     </div>
       
     `
   );
 }
+
 items.forEach((item) => inject(item));
 
-function buy() {}
+const cart = [];
 
-const buttons = document.querySelectorAll("button");
-buttons.forEach((button) => {
-  button.addEventListener("click", buy);
-});
+function buy() {
+  const buttons = document.querySelectorAll("button");
+  buttons.forEach((button) => {
+    button.addEventListener("click", buy);
+  });
+}

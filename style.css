@@ -56,9 +56,19 @@ h2 {
     bottom: 0px;
     margin: 10px auto;
     align-items: flex-end;
+    cursor: pointer;
 }
 
+.filter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 20vw;
 
-
-
-/* Add your flexbox CSS below here */
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px gray;
+    cursor: pointer;
+}
