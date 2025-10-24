@@ -187,6 +187,10 @@ const cart = [];
 function buy() {
   const buttons = document.querySelectorAll("button");
   buttons.forEach((button) => {
-    button.addEventListener("click", buy);
+    button.addEventListener("click", buy());
   });
+  button.insertAdjacentHTML("afterbegin");
+  cart.push(item);
 }
+
+buy();
