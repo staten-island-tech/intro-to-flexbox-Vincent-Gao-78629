@@ -173,7 +173,7 @@ function inject(item) {
       <h2>${item.name}</h2> 
       <img src="${item.img}" alt="${item.alt}" class="item-img"/> 
       <h2>$${item.price}</h2> 
-      <button class="button">Add to cart</button>
+      <button class="buy">Add to cart</button>
     </div>
       
     `
@@ -182,15 +182,32 @@ function inject(item) {
 
 items.forEach((item) => inject(item));
 
+function filter() {
+  const filter = document.querySelector(".filter");
+}
+
 const cart = [];
 
 function buy() {
   const buttons = document.querySelectorAll("button");
   buttons.forEach((button) => {
-    button.addEventListener("click", buy());
+    button.addEventListener("click", (event) => {
+      let itemName = event.target
+        .closest(".container")
+        .querySelector("h2").textContent;
+      let itemPrice = event.target
+        .closest(".container")
+        .querySelectorAll("h2")[1].textContent;
+      console.log(itemName, itemPrice);
+      document.querySelector(".cart").insertAdjacentHTML(
+        "beforeend",
+        `<div class="cartitems">
+          <h2>${itemName}</h2>
+          <h2>${itemPrice}</h2>
+        </div>`
+      );
+    });
   });
-  button.insertAdjacentHTML("afterbegin");
-  cart.push(item);
 }
 
 buy();
