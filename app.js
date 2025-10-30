@@ -115,7 +115,7 @@ const items = [
   },
   {
     name: "Lobster",
-    price: 10.99,
+    price: 20.99,
     inStock: true,
     class: "seafood",
     img: "img/lobster.webp",
@@ -187,8 +187,9 @@ function filter() {
 }
 
 const cart = [];
+let cartTotal = 0;
 
-function buy() {
+function addToCart() {
   const buttons = document.querySelectorAll("button");
   buttons.forEach((button) => {
     button.addEventListener("click", (event) => {
@@ -198,7 +199,6 @@ function buy() {
       let itemPrice = event.target
         .closest(".container")
         .querySelectorAll("h2")[1].textContent;
-      console.log(itemName, itemPrice);
       document.querySelector(".cart").insertAdjacentHTML(
         "beforeend",
         `<div class="cartitems">
@@ -206,8 +206,10 @@ function buy() {
           <h2>${itemPrice}</h2>
         </div>`
       );
+      cartTotal = cartTotal + Number(itemPrice.slice(1));
+      console.log(Number(cartTotal.toFixed(2)));
     });
   });
 }
 
-buy();
+addToCart();
