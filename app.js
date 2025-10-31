@@ -184,7 +184,12 @@ items.forEach((item) => inject(item));
 
 function filter() {
   const filter = document.querySelector(".filter");
+  filter.addEventListener("click", (event) => {
+    const filterClass = event.target.filter;
+  });
 }
+
+filter();
 
 const cart = [];
 let cartTotal = 0;
@@ -207,7 +212,9 @@ function addToCart() {
         </div>`
       );
       cartTotal = cartTotal + Number(itemPrice.slice(1));
-      console.log(Number(cartTotal.toFixed(2)));
+      document.querySelector(
+        ".cartTotal"
+      ).textContent = `Total: $${cartTotal.toFixed(2)}`;
     });
   });
 }

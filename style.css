@@ -38,7 +38,7 @@ h2 {
 .filter {
     display: inline-flex;
     flex-direction: row;
-    width: 20vw;
+    width: 19vw;
     padding: 10px;
     margin: 15px auto;
     border-radius: 5px;
@@ -79,7 +79,7 @@ button:hover {
 .cartitems {
     display: inline-flex;
     width: 13vw;
-    height: 6vw;
+    height: 7vw;
     padding: 15px;
     margin: 5px 5px;
     background: aqua;
