@@ -183,9 +183,12 @@ function inject(item) {
 items.forEach((item) => inject(item));
 
 function filter() {
-  const filter = document.querySelector(".filter");
-  filter.addEventListener("click", (event) => {
-    const filterClass = event.target.filter;
+  const filters = document.querySelector(".filter");
+  filters.forEach((filter) => {
+    "click",
+      (event) => {
+        classf;
+      };
   });
 }
 
