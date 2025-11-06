@@ -169,33 +169,40 @@ function inject(item) {
   section.insertAdjacentHTML(
     "beforeend",
     `
-    <div class="container">
+    <div class="container" data-class="${item.class}">
       <h2>${item.name}</h2> 
       <img src="${item.img}" alt="${item.alt}" class="item-img"/> 
       <h2>$${item.price}</h2> 
       <button class="buy">Add to cart</button>
     </div>
-      
     `
   );
 }
 
 items.forEach((item) => inject(item));
 
-function filter(items) {
-  const filters = document.querySelector(".filter");
-  filters.addEventListener("click", (event) => {
-    document.querySelector(".document").innerHTML = "";          
-}
-
-filter();
+const filters = document.querySelectorAll(".filter");
+filters.forEach((button) => {
+  button.addEventListener("click", () => {
+    const filterClass = button.getAttribute("data-filter");
+    const itemContainer = document.querySelectorAll(".container");
+    itemContainer.forEach((item) => {
+      const itemClass = item.getAttribute("data-class");
+      if (filterClass === "all" || filterClass === itemClass) {
+        item.style.display = "";
+      } else {
+        item.style.display = "none";
+      }
+    });
+  });
+});
 
 const cart = [];
 let cartTotal = 0;
 
 function addToCart() {
-  const buttons = document.querySelectorAll("button");
-  buttons.forEach((button) => {
+  const buyButton = document.querySelectorAll(".buy");
+  buyButton.forEach((button) => {
     button.addEventListener("click", (event) => {
       let itemName = event.target
         .closest(".container")
